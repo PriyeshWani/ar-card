@@ -8,27 +8,25 @@
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
+        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/CesiumMan.gltf"></a-asset-item>
         </a-assets>
 
-        <a-marker type='pattern' patternUrl='https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/pattern-06-barcode.patt' >
+        <a-marker type='barcode' value='7'>
+            <a-box position='0 0.5 0' color="yellow"></a-box>
+        </a-marker>
+
+        <a-marker id="animated-marker" type='barcode' value='6'>
+            <a-image id="test" src="models/base 1-10.jpg" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="1" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image>
             <!-- <a-entity
                 animation-mixer
                 gltf-model="#animated-asset"
                 scale="2 2 2">
             </a-entity> -->
         </a-marker>
-
-        <!-- <a-marker id="animated-marker" type='barcode' value='6'>
-            <a-entity
-                animation-mixer
-                gltf-model="#animated-asset"
-                scale="2 2 2">
-            </a-entity>
-        </a-marker> -->
 
         <a-entity camera></a-entity>
         </a-scene>
