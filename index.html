@@ -16,27 +16,16 @@
                 <a-box position='0 0 0' color="yellow"></a-box>
             </a-marker>
 
-            <!-- <a-marker-camera type='pattern' url='models/pattern-LandorBase.patt'>
-                <a-image id="test" src="models/base 1-10.jpg" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="0.85" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image>
-            </a-marker-camera> -->
-
-         <!--    <a-assets>
-              <video  id="clothsim" autoplay="true" loop="true" scale="1 1 1" rotation="-90 0 0" width="500" height="500" position="0 0 0" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/Cloth-motion.mp4"></video>
-            </a-assets> -->
-
             <a-assets>
-                <a-asset-item id="ship-obj" src="models/ClothSim.obj"></a-asset-item>
-                <a-asset-item id="ship-mtl" src="models/ClothSim.mtl"></a-asset-item>
-                <!-- <a-asset-item id="animated-asset" rotation="-90 0 0" width="10" height="15" position="0 0 0" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.obj" mtl="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.mtl"></a-asset-item> -->
+                <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker id="animated-marker" type='barcode' value='6'>
-                <a-entity obj-model="obj: #ship-obj; mtl: #ship-mtl" scale="0.5 0.5 0.5"></a-entity>
-               <!--  <a-entity
+                <a-entity
                     animation-mixer
                     obj-model="#animated-asset"
                     scale="2 2 2">
-                </a-entity> -->
+                </a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
