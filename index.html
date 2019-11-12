@@ -25,15 +25,18 @@
             </a-assets> -->
 
             <a-assets>
-                <a-asset-item id="animated-asset" rotation="-90 0 0" width="10" height="15" position="0 0 0" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.obj" mtl="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.mtl"></a-asset-item>
+                <a-asset-item id="ship-obj" src="models/ClothSim.obj"></a-asset-item>
+                <a-asset-item id="ship-mtl" src="models/ClothSim.mtl"></a-asset-item>
+                <!-- <a-asset-item id="animated-asset" rotation="-90 0 0" width="10" height="15" position="0 0 0" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.obj" mtl="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.mtl"></a-asset-item> -->
             </a-assets>
 
             <a-marker id="animated-marker" type='barcode' value='6'>
-                <a-entity
+                <a-entity obj-model="obj: #ship-obj; mtl: #ship-mtl" scale="0.5 0.5 0.5"></a-entity>
+               <!--  <a-entity
                     animation-mixer
                     obj-model="#animated-asset"
                     scale="2 2 2">
-                </a-entity>
+                </a-entity> -->
             </a-marker>
 
             <a-entity camera></a-entity>
