@@ -20,35 +20,13 @@
                 <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/ClothSim.gltf"></a-asset-item>
             </a-assets>
 
-            <a-marker id="animated-marker" type='barcode' value='6'>
-                <a-entity
-                    animation-mixer
-                    gltf-model="#animated-asset"
-                    position="0 0 0" scale="1 1 1" rotation="-90 0 0">
-                </a-entity>
-            </a-marker>
+            <a-entity
+                animation-mixer
+                gltf-model="#animated-asset"
+                position="0 0 0" scale="1 1 1" rotation="-90 0 0">
+            </a-entity>
 
-            <a-entity camera></a-entity>
+            <a-marker-camera id="animated-marker" preset="hiro"></a-marker-camera>
         </a-scene>
     </body>
-    <!-- <script>
-        AFRAME.registerComponent('vidhandler', {
-          init: function () {
-            this.toggle = false;
-            document.querySelector("#clothsim").pause(); //reference to the video
-          },
-          tick:function(){  
-               if(document.querySelector("a-marker").object3D.visible == true){
-                 if(!this.toggle){
-                   this.toggle = true;
-                   document.querySelector("#clothsim").play();
-                 }
-               }else{
-                 this.toggle = false;
-                 document.querySelector("#clothsim").pause();
-               }
-            }
-         });
-    </script> -->
-
 </html>
