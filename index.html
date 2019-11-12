@@ -6,7 +6,6 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
@@ -16,12 +15,12 @@
                 <a-box position='0 0.5 0' color="yellow"></a-box>
             </a-marker>
 
-            <a-marker-camera type='pattern' url='models/pattern-LandorBase.patt'>
+            <!-- <a-marker-camera type='pattern' url='models/pattern-LandorBase.patt'>
                 <a-image id="test" src="models/base 1-10.jpg" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="0.85" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image>
-            </a-marker-camera>
+            </a-marker-camera> -->
 
             <a-assets>
-                <a-asset-item id="animated-asset" src="models/CesiumMan.gltf"></a-asset-item>
+                <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker id="animated-marker" type='barcode' value='6'>
