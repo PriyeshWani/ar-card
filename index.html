@@ -21,7 +21,7 @@
             </a-marker-camera> -->
 
             <a-assets>
-              <video  id="clothsim" autoplay="true" loop="true" rotation="-90 0 0" width="10" height="15" position="-10 -20 0" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/Cloth-motion.mp4"></video>
+              <video  id="clothsim" autoplay="true" loop="true" src="https://raw.githubusercontent.com/PriyeshWani/ar-card/master/models/Cloth-motion.mp4"></video>
             </a-assets>
 
             <a-assets>
@@ -30,7 +30,7 @@
 
             <a-marker id="animated-marker" type='barcode' value='6'>
                 <!-- <a-image id="test" src="models/base 1-10.jpg" position=" 0 0" rotation="-90 0 0" width="" height="" opacity="0.85" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image> -->
-                <a-entity scale="1 1 1" rotation="-90 0 0">
+                <a-entity scale="2 2 2" rotation="-90 0 0" width="10" height="15" position="-10 -20 0">
                     <a-video play-on-scan src="#clothsim"></a-video>
                 </a-entity>
                 <!-- <a-entity
