@@ -16,16 +16,11 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<video id="video" autoplay="false" loop crossOrigin="anonymous" webkit-playsinline style="display:none" src="video/Cloth_with_base.mp4">
-	<!-- <source src="video/sintel.ogv" type='video/ogg; codecs="theora, vorbis"'>
-	<source src="video/Cloth_with_base.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
+<video id="video" autoplay="false" loop crossOrigin="anonymous" webkit-playsinline style="display:none">
+	<source src="video/Cloth_with_base.ogv" type='video/ogg; codecs="theora, vorbis"'>
+    <source src="video/Cloth_with_base.mp4" type='video/mp4;'>
 </video>
 		
-<!-- 
-  Example created by Lee Stemkoski: https://github.com/stemkoski
-  Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
--->
-
 <script>
 
 var scene, camera, renderer, clock, deltaTime, totalTime;
