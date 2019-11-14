@@ -17,7 +17,7 @@
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
 <video id="video" autoplay="false" loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-    <source src="video/Cloth_with_base.mp4" type="video/mp4">
+    <source src="video/Cloth.mp4" type="video/mp4">
 </video>
 		
 <script>
@@ -48,19 +48,15 @@ function initialize()
 		alpha: true
 	});
 	renderer.setClearColor(new THREE.Color('lightgrey'), 0)
-	renderer.setSize( 480, 640 );
+	renderer.setSize( 1080, 720 );
 	renderer.domElement.style.position = 'absolute'
-	renderer.domElement.style.top = '0px'
-	renderer.domElement.style.left = '0px'
+	renderer.domElement.style.top = '-325px'
+	renderer.domElement.style.left = '125px'
 	document.body.appendChild( renderer.domElement );
 
 	clock = new THREE.Clock();
 	deltaTime = 0;
 	totalTime = 0;
-	
-	////////////////////////////////////////////////////////////
-	// setup arToolkitSource
-	////////////////////////////////////////////////////////////
 
 	arToolkitSource = new THREEx.ArToolkitSource({
 		sourceType : 'webcam',
@@ -100,18 +96,13 @@ function initialize()
 		camera.projectionMatrix.copy( arToolkitContext.getProjectionMatrix() );
 	});
 
-	////////////////////////////////////////////////////////////
-	// setup markerRoots
-	////////////////////////////////////////////////////////////
-
-	// build markerControls
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
+	let geometry1 = new THREE.PlaneBufferGeometry(2,3, 4,4);
 
 	let video = document.getElementById( 'video' );
 	let texture = new THREE.VideoTexture( video );
