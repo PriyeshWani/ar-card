@@ -80,6 +80,11 @@ function initialize()
 	window.addEventListener('resize', function(){
 		onResize()
 	});
+
+    window.addEventListener('click', function () {
+      var v = document.querySelector('#video');
+      v.play();
+    });
 	
 	////////////////////////////////////////////////////////////
 	// setup arToolkitContext
