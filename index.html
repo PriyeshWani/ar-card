@@ -76,7 +76,7 @@ function initialize()
 		onResize()
 	});
 	
-	// handle resize event
+	
 	window.addEventListener('resize', function(){
 		onResize()
 	});
@@ -86,11 +86,6 @@ function initialize()
       v.play();
     });
 	
-	////////////////////////////////////////////////////////////
-	// setup arToolkitContext
-	////////////////////////////////////////////////////////////	
-
-	// create atToolkitContext
 	arToolkitContext = new THREEx.ArToolkitContext({
 		cameraParametersUrl: 'data/camera_para.dat',
 		detectionMode: 'mono'
@@ -107,7 +102,7 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(2,3, 4,4);
+	let geometry1 = new THREE.PlaneBufferGeometry(8,12, 4,4);
 
 	let video = document.getElementById( 'video' );
 	let texture = new THREE.VideoTexture( video );
