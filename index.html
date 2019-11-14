@@ -16,7 +16,7 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<video id="video" autoplay="false" loop crossOrigin="anonymous" webkit-playsinline style="display:none">
+<video id="video" autoplay="false" loop crossOrigin="anonymous" playsinline controls="true" style="display:none">
     <source src="video/Cloth.mp4" type="video/mp4">
 </video>
 		
@@ -50,8 +50,8 @@ function initialize()
 	renderer.setClearColor(new THREE.Color('lightgrey'), 0)
 	renderer.setSize( 1080, 720 );
 	renderer.domElement.style.position = 'absolute'
-	renderer.domElement.style.top = '-325px'
-	renderer.domElement.style.left = '125px'
+	renderer.domElement.style.top = '0px'
+	renderer.domElement.style.left = '0px'
 	document.body.appendChild( renderer.domElement );
 
 	clock = new THREE.Clock();
