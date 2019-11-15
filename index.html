@@ -50,8 +50,8 @@ function initialize()
 	renderer.setClearColor(new THREE.Color('lightgrey'), 0)
 	renderer.setSize( 1080, 720 );
 	renderer.domElement.style.position = 'absolute'
-	renderer.domElement.style.top = '0px'
-	renderer.domElement.style.left = '0px'
+	renderer.domElement.style.top = '-175px'
+	renderer.domElement.style.left = '120px'
 	document.body.appendChild( renderer.domElement );
 
 	clock = new THREE.Clock();
@@ -102,7 +102,7 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
+	let geometry1 = new THREE.PlaneBufferGeometry(10,14, 4,4);
 
 	let video = document.getElementById( 'video' );
 	let texture = new THREE.VideoTexture( video );
